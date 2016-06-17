@@ -1,0 +1,85 @@
+* {padding:0; margin:0;}
+li {color:white; font-family: 'Oswald', sans-serif; text-transform: uppercase; cursor:pointer;}
+li:hover {color:red;}
+h1, h2, h3 {font-family: 'Oswald', sans-serif;}
+body {text-align:center;}
+p, h1, h2, h3, h4, h5 {word-wrap: break-word;}
+.break-div {height:1px; background-color:grey; width:100%; margin:0 auto;}
+
+/* Nav Bar */
+.nav-container {text-align:center; background-color:white; border-bottom:1px solid black;}
+.nav-links {display:block; width:40px; padding: 10px 20px; margin: 0 5px; color:black;}
+.active-nav {color: red !important;}
+.left-nav {display:inline-block;}
+.right-nav {display:inline-block;}
+.nav-logo {display:inline-block; width:100px; height:100px;}
+.brain-logo {width:300px;}
+.header-spacer {height:50px;}
+
+
+
+/* Home Page */
+.home-splash {background-image: url('../images/home-splash.jpg'); background-size:cover; background-position:center center; height:300px; position:relative; text-align:center; display: -ms-flexbox; -ms-flex-pack: center; -ms-flex-align: center; display: flex; justify-content: center; align-items: flex-end;}
+.home-splash-text-container {background-color:black; color:white; text-align:center; padding:30px 0 50px 0; background-image: url('../images/stars.png');  background-position:center center;}
+.home-splash-text {padding: 15px 0; font-family: 'Oswald', sans-serif; text-transform:uppercase;}
+
+.offerings-container {margin-bottom:100px;}
+.professional-pic {background-image: url('../images/professional.jpg'); background-size:cover; background-position:center center; height:300px;}
+.amateur-pic {background-image: url('../images/amateur.jpg'); background-size:cover; background-position:center center; height:300px;}
+.kids-pic {background-image: url('../images/kids.png'); background-size:cover; background-position:center center; height:300px;}
+
+.artist-icon {height:75px; width:75px; display:inline-block}
+.artist-title {font-size: 30px; text-align:center; padding:10px 0;color:black;}
+.artist-text {padding-bottom:20px;}
+.artist-container {max-width: 1000px; margin: 30px auto;}
+.artist {height:200px; width:200px; margin:20px 0; display: block; filter: gray; -webkit-filter: grayscale(100%); cursor:pointer; color:white; -ms-flex-direction: column; -ms-flex-align: center; flex-direction: column; align-items: center; display: -ms-flexbox; -ms-flex-pack: center; -ms-flex-align: center; display: flex; justify-content: center; align-items: center;}
+.artist:hover {filter: none; -webkit-filter: none;}
+.andrew {background-image: url('../images/andrew.jpg'); background-size:cover; background-position:center center;}
+.bob {background-image: url('../images/bob.jpg'); background-size:cover; background-position:center center;}
+.ginger {background-image: url('../images/ginger.jpg'); background-size:cover; background-position:center center;}
+.jeannie {background-image: url('../images/jeannie.jpg'); background-size:cover; background-position:center center;}
+.john {background-image: url('../images/john.jpg'); background-size:cover; background-position:center center;}
+.sarah {background-image: url('../images/sarah.jpg'); background-size:cover; background-position:center center;}
+.stephane {background-image: url('../images/stephane.jpg'); background-size:cover; background-position:center center;}
+.raquel {background-image: url('../images/raquel.jpg'); background-size:cover; background-position:center center;}
+
+.contact-container {display:block; text-align:center; width:100%; color: black; padding:30px 0;}
+.email-input {width:80%; max-width: 800px; display:block; margin: 10px auto; line-height:25px; font-size:15px; padding-left:10px;}
+.email-input:focus {border: 2px solid black; outline: none;}
+.feedback {height:200px; border:1px solid #cccccc;}
+
+.social-icon {width:40px; height: 40px; border-radius:25px; border:2px solid black; background-color:white; margin: 0 10px; cursor:pointer; display: -ms-flexbox; -ms-flex-pack: center; -ms-flex-align: center; display: flex; justify-content: center; align-items: center;}
+.social-icon:hover {background-color:red; border: 2px solid red;}
+
+.footer {background-color: black; padding:20px 0;}
+
+/* Helper Classes Mobile */
+.absolute-center-children {display: -ms-flexbox; -ms-flex-pack: center; -ms-flex-align: center; display: flex; justify-content: center; align-items: center;}
+.vert-center-children {display: -ms-flexbox; -ms-flex-align: center; display: flex; align-items: center;}
+.flex-column {-ms-flex-direction: column; -ms-flex-align: center; flex-direction: column; align-items: center;}
+.row {width: 100%; overflow:hidden;}
+[class*='col-'] {float: left;}
+.col-1-3 {width: 100%;}
+.merriweather {font-family: 'Merriweather', serif;}
+.oswald {font-family: 'Oswald', sans-serif;}
+.caps {text-transform: uppercase;}
+.white-button {color:white; border: 2px solid white;  display:inline-block; padding: 5px 15px; margin:5px 0; text-transform:uppercase; font-family: 'Oswald', sans-serif; text-decoration:none;}
+.white-button:hover {color:red; border:2px solid red; display:inline-block; }
+.black-button {color:black; border: 2px solid black;  display:inline-block; padding: 5px 15px; margin:5px 0; text-transform:uppercase; font-family: 'Oswald', sans-serif; text-decoration:none;}
+.black-button:hover {color:red; border:2px solid red; display:inline-block; }
+.pad-20 {padding:20px;}
+.vert-pad-20 {padding:20px 0;}
+.grey {background-color: #eeeeee;}
+
+/* Above 600px */
+@media (min-width: 796px) {
+  .nav-container {height:50px; position:fixed; z-index:90; width:100%;}
+  .nav-links {display:inline-block;}
+  .nav-logo {display:inline-block; margin-top:55px; z-index: 10;}
+
+  .home-splash {justify-content: flex-end; height:600px;}
+  .home-splash-text-container {}
+
+  /* Helper Classes Desktop */
+  .col-1-3 {width: 33.33%;}
+}

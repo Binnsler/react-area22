@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Area 22</title>
+  <script src="js/react.js"></script>
+  <script src="js/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <div id="app"></div>
+
+  <script type="text/babel">
+    // Navbar Component
+    var Navbar = React.createClass({
+
+      render: function(){
+
+        var homeActive = '',
+        studioActive = '',
+        soundActive = '',
+        aboutActive = '',
+        contactActive = '',
+        page = this.props.page;
+
+        if(page == 'studio'){
+          studioActive = 'active-nav'
+        }
+
+        else if(page == 'sound'){
+          soundActive =  'active-nav'
+        }
+
+        else if(page == 'about'){
+          aboutActive = 'active-nav'
+        }
+
+        else if(page == 'contact'){
+          contactActive = 'active-nav'
+        }
+
+        return(
+          <div>
+            <nav className="navbar">
+              <div className="nav-container absolute-center-children">
+                <ul className="left-nav">
+                  <li className="nav-links"><a onClick={this.props.studioClick} className={studioActive}>Studio</a></li>
+                  <li className="nav-links"><a onClick={this.props.soundClick} className={soundActive}>Sound</a></li>
+                </ul>
+                <img className="nav-logo" onClick={this.props.homeClick} src="http://fantlab.ru/images/users/41000_3" alt=""/>
+                <ul className="right-nav">
+                  <li className="nav-links"><a onClick={this.props.aboutClick} className={aboutActive}>About</a></li>
+                  <li className="nav-links"><a onClick={this.props.contactClick} className={contactActive}>Contact</a></li>
+                </ul>
+              </div>
+              <div className="header-spacer"></div>
+            </nav>
+          </div>
+        )
+      }
+    });
+
+    // Footer Component
+    var Footer = React.createClass({
+
+      getDefaultProps: function(){
+        return {
+          facebook: 'https://www.facebook.com',
+          twitter: 'https://www.twitter.com',
+          youtube: 'https://www.youtube.com',
+        }
+      },
+
+      render: function(){
+        return(
+          <div>
+          <br/>
+          <footer>
+            <div className="contact-container">
+              <h1 className="vert-pad-20">Please send us a message if you are interested in any of our services or just want to connect.</h1>
+              <input type="text" className="email-input" placeholder="Email Address"/>
+              <input type="text" className="email-input" placeholder="Confirm Email"/>
+              <textarea type="text" className="email-input feedback" placeholder="What is your question?"></textarea>
+              <a className="black-button" href="#" role="button">Submit &raquo;</a>
+            </div>
+            <div className="absolute-center-children footer">
+              <a href={this.props.facebook}><div className="social-icon facebook"><img src="images/facebook.png" alt=""/></div></a>
+              <a href={this.props.twitter}><div className="social-icon twitter"><img src="images/twitter.png" alt=""/></div></a>
+              <a href={this.props.youtube}><div className="social-icon youtube"><img src="images/youtube.png" alt=""/></div></a>
+            </div>
+          </footer>
+          </div>
+        )
+      }
+    });
+
+    // HomePage Component
+    var HomePage = React.createClass({
+
+      propTypes: {
+        firstSegment: React.PropTypes.string,
+        secondSegment: React.PropTypes.string,
+        thirdSegment: React.PropTypes.string,
+        link: React.PropTypes.string,
+
+      },
+
+      getDefaultProps: function(){
+        return {
+          firstSegment: 'Professionals',
+          secondSegment: 'Artists',
+          thirdSegment: 'Kids',
+          link: 'https://www.google.com'
+        }
+      },
+
+      render: function(){
+        return (
+          <div>
+            <div className="home-splash"></div>
+            <div className="home-splash-text-container">
+            <img className="brain-logo" src="images/brain.jpg" alt=""/>
+            <h3 className="home-splash-text">AREA 22: A community of artists, supporting the artistic community.</h3>
+            <a className="white-button" href="#" role="button">Learn more &raquo;</a>
+            </div>
+
+          <div className="row offerings-container">
+            <div className="col-1-3">
+              <div className="professional-pic"></div>
+              <div className="pad-20">
+                <h2>{this.props.firstSegment}</h2>
+                <p className="vert-pad-20">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <a className="black-button" href={this.props.link} role="button">Production Studio</a>
+              </div>
+            </div>
+            <div className="col-1-3">
+              <div className="amateur-pic"></div>
+              <div className="pad-20">
+                <h2>{this.props.secondSegment}</h2>
+                <p className="vert-pad-20">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                <a className="black-button" href="#" role="button">Development</a>
+              </div>
+           </div>
+            <div className="col-1-3">
+              <div className="kids-pic"></div>
+              <div className="pad-20">
+                <h2>{this.props.thirdSegment}</h2>
+                <p className="vert-pad-20">Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <a className="black-button" href="#" role="button">Classes</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="break-div"></div>
+          <div className="artist-title absolute-center-children">
+          <img className="artist-icon" src="http://rs268.pbsrc.com/albums/jj2/suar_bucket/Guitar.jpg~c200" alt=""/><h1>Artists</h1>
+          </div>
+          <p className="artist-text">Here are the artists who currently call Area 22 home. Click on their picture to view their profile.</p>
+          <div className="row artist-container">
+          <div className="col-1-3 absolute-center-children">
+            <div className="artist bob"><h3>Bob Yen</h3><h3>Sound Engineering</h3></div>
+          </div>
+          <div className="col-1-3 absolute-center-children">
+            <div className="artist andrew"><h3>Andrew Brown</h3><h3>Guitar</h3></div>
+          </div>
+          <div className="col-1-3 absolute-center-children">
+            <div className="artist ginger"><h3>Ginger Rogers</h3><h3>Graphic Design</h3></div>
+          </div>
+          <div className="col-1-3 absolute-center-children">
+            <div className="artist jeannie"><h3>Jeannie Hua</h3><h3>Painting</h3></div>
+          </div>
+          <div className="col-1-3 absolute-center-children">
+            <div className="artist john"><h3>John Schweizer</h3><h3>Computer Engineering</h3></div>
+          </div>
+          <div className="col-1-3 absolute-center-children">
+            <div className="artist sarah"><h3>Sarah Stone</h3><h3>Vocals</h3></div>
+          </div>
+          <div className="col-1-3 absolute-center-children">
+            <div className="artist stephane"><h3>Stephane Midic</h3><h3>Vocals</h3></div>
+          </div>
+          <div className="col-1-3 absolute-center-children">
+            <div className="artist raquel"><h3>Raquel Johnson</h3><h3>Piano</h3></div>
+          </div>
+          </div>
+          <div className="break-div"></div>
+        </div>
+        )
+      }
+    });
+
+    // AboutPage Component
+    var AboutPage = React.createClass({
+
+      render: function(){
+        return (
+          <div>
+            <h1>This is the about page, slightly obscured.</h1>
+          </div>
+        )
+      }
+    });
+
+    // Main App Component
+    var App = React.createClass({
+
+      getInitialState: function(){
+        return {
+          page: 'home'
+        }
+      },
+
+      handleHomeClick: function(){
+        this.setState({
+          page: 'home'
+        })
+      },
+
+      handleStudioClick: function(){
+        this.setState({
+          page: 'studio'
+        })
+      },
+
+      handleSoundClick: function(){
+        this.setState({
+          page: 'sound'
+        })
+      },
+
+      handleAboutClick: function(){
+        this.setState({
+          page: 'about'
+        })
+      },
+
+      handleContactClick: function(){
+        this.setState({
+          page: 'contact'
+        })
+      },
+
+      render: function(){
+        if(this.state.page == 'home'){
+          var page = <HomePage/>
+        }
+
+        if(this.state.page == 'about'){
+          var page = <AboutPage/>
+        }
+        return (
+
+          <div>
+            < Navbar
+              page = {this.state.page}
+              homeClick = {this.handleHomeClick}
+              studioClick = {this.handleStudioClick}
+              soundClick = {this.handleSoundClick}
+              aboutClick = {this.handleAboutClick}
+              contactClick = {this.handleContactClick}
+            />
+            {page}
+            < Footer />
+          </div>
+        )
+      }
+    });
+
+    ReactDOM.render(
+      <App />, document.getElementById('app')
+    );
+  </script>
+</body>
+</html>
