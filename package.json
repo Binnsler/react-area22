@@ -1,0 +1,30 @@
+{
+  "name": "react-area22",
+  "version": "1.0.0",
+  "description": "A webapp for Area Twenty Two, a production studio and artist community based in Plymouth, MA.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Binnsler/react-area22.git"
+  },
+  "author": "jameibinns",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Binnsler/react-area22/issues"
+  },
+  "homepage": "https://github.com/Binnsler/react-area22#readme",
+
+  "devDependencies": {
+    "babel-core": "5.8.*",
+    "babel-loader": "5.3.*",
+    "webpack": "1.12.*"
+  },
+
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  }
+}
