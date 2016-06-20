@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
 
-class Studio extends Component {
+class Contact extends Component {
 
     render(){
 
       return (
         <div>
-          <h1 className="vert-pad-20">This is the Studio page.</h1>
+          <h1 className="vert-pad-20">This is the Contact page.</h1>
         </div>
       )
     }
 
 }
 
-export default Studio
+export default Contact

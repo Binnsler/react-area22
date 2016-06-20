@@ -6,9 +6,11 @@ class Footer extends Component {
   constructor(props){
     super(props);
 
-    this.facebook: 'https://www.facebook.com';
-    this.twitter: 'https://www.twitter.com';
-    this.youtube: 'https://www.youtube.com';
+    this.state = {
+      facebook: "https://www.facebook.com",
+      twitter: "https://www.twitter.com",
+      youtube: "https://www.youtube.com",
+    }
   }
 
   render(){
