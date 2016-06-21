@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 
 class Footer extends Component {
 
@@ -19,7 +18,7 @@ class Footer extends Component {
       <br/>
       <footer>
         <div className="contact-container">
-          <h1 className="vert-pad-20">Please send us a message if you are interested in any of our services or just want to connect.</h1>
+          <h1 className="contact-title">Please send us a message if you are interested in any of our services or just want to connect.</h1>
           <input type="text" className="email-input" placeholder="Email Address"/>
           <input type="text" className="email-input" placeholder="Confirm Email"/>
           <textarea type="text" className="email-input feedback" placeholder="What is your question?"></textarea>

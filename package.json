@@ -4,7 +4,7 @@
   "description": "A webapp for Area Twenty Two, a production studio and artist community based in Plymouth, MA.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server --inline --content-base . --history-api-fallback"
   },
   "repository": {
     "type": "git",
@@ -17,14 +17,18 @@
   },
   "homepage": "https://github.com/Binnsler/react-area22#readme",
 
-  "devDependencies": {
-    "babel-core": "5.8.*",
-    "babel-loader": "5.3.*",
-    "webpack": "1.12.*"
-  },
-
   "dependencies": {
     "react": "^0.14.7",
-    "react-dom": "^0.14.7"
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "http-server": "^0.8.5",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
   }
 }
