@@ -8,7 +8,9 @@ p, h1, h2, h3, h4, h5 {word-wrap: break-word;}
 
 /* Nav Bar */
 .nav-container {text-align:center; background-color:white; border-bottom:1px solid black;}
-.nav-links {display:block; width:40px; padding: 10px 20px; margin: 0 5px; color:black;}
+.nav-link-container {display:block; padding: 10px 20px; margin: 0 5px; color:black;}
+.nav-link {text-decoration:none; color: black;}
+.nav-link:hover {color:red;}
 .active-nav {color: red !important;}
 .left-nav {display:inline-block;}
 .right-nav {display:inline-block;}
@@ -85,7 +87,7 @@ p, h1, h2, h3, h4, h5 {word-wrap: break-word;}
 /* Above 600px */
 @media (min-width: 796px) {
   .nav-container {height:50px; position:fixed; z-index:90; width:100%;}
-  .nav-links {display:inline-block;}
+  .nav-link-container {display:inline-block;}
   .nav-logo {display:inline-block; margin-top:55px; z-index: 10;}
 
   .home-splash {justify-content: flex-end; height:600px;}

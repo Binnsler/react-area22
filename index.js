@@ -1,15 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App.js';
-import Home from './pages/Home.js';
-import About from './pages/About.js';
-import Sound from './pages/Sound.js';
-import Studio from './pages/Studio.js';
-import Contact from './pages/Contact.js';
+import { render } from 'react-dom';
+import App from './modules/App';
+import Sound from './modules/Sound';
+import About from './modules/About';
+import Studio from './modules/Studio';
 
 import{Router, Route, browserHistory, IndexRoute} from 'react-router';
+import Home from './modules/Home';
 
-ReactDOM.render((
+render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={Home}/>
@@ -18,4 +17,4 @@ ReactDOM.render((
       <Route path="/studio" component={Studio}/>
     </Route>
   </Router>
-), document.getElementById('app'));
+), document.getElementById('app'))

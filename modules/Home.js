@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import ReactDom from 'react-dom';
 
 class Home extends Component {
 
@@ -20,7 +19,7 @@ class Home extends Component {
               <div className="pad-20">
                 <h2>{this.props.firstSegment}</h2>
                 <p className="vert-pad-20">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-                <a className="black-button" href={this.props.link} role="button">Production Studio</a>
+                <a className="black-button" href={this.props.link} role="button">Production</a>
               </div>
             </div>
             <div className="col-1-3">

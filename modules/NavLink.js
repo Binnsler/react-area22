@@ -3,6 +3,6 @@ import {Link} from 'react-router';
 
 export default React.createClass({
   render(){
-    return <Link {...this.props} activeStyle={{color:'red'}}/>
+    return <Link {...this.props} className='nav-link' activeClassName='active-nav'/>
   }
 })
